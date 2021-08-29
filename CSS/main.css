@@ -5,7 +5,7 @@
     margin: 0;
 }
 :root {
-    --main-padding: 15px;
+    --main-padding: 50px;
     --color1:#1B1D1A;
     --color2:#362617;
     --color3:#CB7D46;
@@ -61,6 +61,66 @@ ul {
     font-size: 20px;
     margin-bottom: 40px;
     color: var(--color6);
+}
+.stars.n1::before ,
+.stars.n1::after , 
+.stars.n2::before ,
+.stars.n2::after ,
+.stars.n3::before ,
+.stars.n3::after , 
+.stars.n4::before ,
+.stars.n4::after ,
+.stars.n5::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 800;
+    font-size: 24px;
+}
+.stars.n1::before {
+    content: "\f005 ";
+}
+.stars.n1::after {
+    content: "\f005 \f005 \f005 \f005";
+}
+.stars.n2::before {
+    content: "\f005 \f005 ";
+}
+.stars.n2::after {
+    content: "\f005 \f005 \f005 ";
+}
+.stars.n3::before {
+    content: "\f005 \f005 \f005 ";
+}
+.stars.n3::after {
+    content: "\f005 \f005 ";
+}
+.stars.n4::before {
+    content: "\f005 \f005 \f005 \f005 ";
+}
+.stars.n4::after {
+    content: "\f005 ";
+}
+.stars.n5::before {
+    content: "\f005 \f005 \f005 \f005 \f005 ";
+}
+.stars::before {
+    color: var(--color3);
+}
+.stars::after {
+    color: var(--color6);
+}
+.stars {
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+.stars:hover {
+    transform: scale(1.2) translateX(-9%);
+    -webkit-transform: scale(1.2) translateX(-9%);
+    -moz-transform: scale(1.2) translateX(-9%);
+    -ms-transform: scale(1.2) translateX(-9%);
+    -o-transform: scale(1.2) translateX(-9%);
 }
 /* end componant */
 /* end global rules */
@@ -128,7 +188,7 @@ h3 {
     cursor: pointer;
     top: 20px;
 }
-@media screen and  (max-width:992px) {
+/* @media screen and  (max-width:992px) {
     .landing .icon {
         width: 200px;
         height: 180px; 
@@ -138,7 +198,7 @@ h3 {
         top: 45px;
         animation-name: up-down-mopile;
     }
-}
+} */
 @keyframes up-down {
     0% {
         transform: translateY(-10px);
@@ -175,6 +235,8 @@ h3 {
 /* start profile  */
 .profile {
     background-color: var(--color1);
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding) ;
 }
 .profile .profile-info{
     display: flex;
@@ -236,9 +298,146 @@ h3 {
 /* end profile */
 /* start experiances*/
 .experiances {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding) ;
     background-color: white;
 }
 .experiances .main-header p {
     color: var(--color2); 
 }
+.experiances .container .section {
+    margin-bottom: 40px;
+    border-bottom: 1px var(--color3) solid;
+}
+.experiances .container .section h3 {
+    margin-bottom: 35px;
+    color: var(--color3);
+}
+.experiances .container .section .part {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+.experiances .container .section .part .place-time {
+    width: 300px;
+}
+.experiances .container .section .part .place-time .place ,
+.experiances .container .section .part .info .head {
+    color: var(--color1);
+    font-weight: bold;
+}
+.experiances .container .section .part .place-time :not(.place) ,
+.experiances .container .section .part .info :not(.head) {
+    color: var(--color4);
+}
+.experiances .container .section .part > div p ,
+.experiances .container .section .part > div h4 , 
+.experiances .container .section .part > div a {
+    margin-bottom: 10px;
+}
+.experiances .container .section .part .info {
+    width: 600px;
+}
+.experiances .container .section .part .info .location {
+    display: inline-block;
+    margin-right: 10px;
+}
+.experiances .container .section .part .info .location::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f3c5";
+    font-weight: 800;
+    margin: 0px 10px 0 0;
+    font-size: 24px;
+    color: var(--color3);
+}
+.experiances .container .section .part .info a::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f0c1";
+    font-weight: 800;
+    margin: 0px 10px 0 0;
+    font-size: 24px;
+    color: var(--color3);
+}
+.experiances .container .section .part .info a {
+    text-decoration: none;
+}
+.experiances .container .section .part .info a:hover {
+    text-decoration: underline;
+    color: var(--color3);
+}
+@media screen and  (max-width:992px) {
+    .experiances .container .section .part {
+        flex-direction: column;
+        /* align-content: space-between; */
+    }
+    .experiances .container .section .part .place-time  {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex: 1 ;
+    }
+    .experiances .container .section .part .place-time .place {
+        display: inline-block;
+        color: var(--color4);
+    }
+}
 /* end experiances */
+/* start abilities */
+.abilities {
+    background-color: var(--color1);
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding) ;
+}
+.abilities .section {
+   padding-bottom: 30px;
+}
+.abilities .section:not(:last-child){
+    border-bottom: 1px var(--color3) solid;
+}
+.abilities .section h3 {
+    color: var(--color3);
+    margin: 40px 0px;
+    font-size: 30px;
+}
+.abilities .section .supjects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+    gap:30px;
+}
+.abilities .section .supjects .supject {
+    display: flex;
+    justify-content: space-between;
+}
+.abilities .section .supjects .supject .name {
+    color: var(--color6);
+    margin-bottom: 10px;
+    display: inline-block;
+}
+/* end abilities */
+/* start project */
+.project {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding) ;
+    background-color: white;
+}
+.project .main-header p {
+    color: var(--color2); 
+}
+.project .pro-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+    gap:30px;
+}
+.project .pro-container .pro {
+    position: relative;
+}
+.project .pro-container .pro img {
+    width: 100%;
+    height: 100%;
+}
+.project .pro-container .pro .text {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* end project  */
