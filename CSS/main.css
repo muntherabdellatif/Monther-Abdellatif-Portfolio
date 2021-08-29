@@ -17,7 +17,6 @@ body {
     scroll-behavior: smooth;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    background-color: var(--color1);
 }
 ul {
     list-style: none;
@@ -50,7 +49,7 @@ ul {
 .main-header {
     text-align: center;
     border-bottom: 1px var(--color3) solid;
-    margin: 20px;
+    margin-bottom: 20px;
 }
 .main-header > h2 {
     font-weight: 300;
@@ -174,6 +173,9 @@ h3 {
 }
 /* end landing */
 /* start profile  */
+.profile {
+    background-color: var(--color1);
+}
 .profile .profile-info{
     display: flex;
     flex-wrap: wrap;
@@ -196,7 +198,6 @@ h3 {
 }
 .profile .profile-info img {
     border-radius: 50%;
-    border: 10px solid var(--main-padding);
     width: 30%;
     height: 30%;
     -webkit-border-radius: 50%;
@@ -233,3 +234,11 @@ h3 {
     }
 }
 /* end profile */
+/* start experiances*/
+.experiances {
+    background-color: white;
+}
+.experiances .main-header p {
+    color: var(--color2); 
+}
+/* end experiances */
