@@ -14,9 +14,11 @@
     --color6:#C3B9AC;
 }
 body {
-    scroll-behavior: smooth;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
+}
+html {
+    scroll-behavior: smooth;
 }
 ul {
     list-style: none;
@@ -130,6 +132,7 @@ ul {
     background-size: cover;
     height: 100vh;
     position: relative;
+    z-index: 1;
 }
 .landing .text {
     color: white;
@@ -168,7 +171,7 @@ h3 {
 }
 .landing .icon {
     position: absolute;
-    right: 50px;
+    right: 25px;
     bottom: 0px;
     width: 100px;
     height: 90px;
@@ -232,6 +235,33 @@ h3 {
 }
 }
 /* end landing */
+/* atsrt bar  */
+.bar {
+    position: fixed;
+    height: 500px;
+    width: 100px;
+    background: var(--color3);
+    top: 20px;
+    right: 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bar ul {
+    flex-basis: 20% ;
+} 
+.bar li {
+    padding: 40px 0px;
+}
+.bar li:not(:last-child) {
+    border-bottom: 1px solid var(--color6);
+}
+.bar li a {
+    color: white ;
+    text-decoration: none;
+}
+/* end bar  */
 /* start profile  */
 .profile {
     background-color: var(--color1);
@@ -521,5 +551,49 @@ h3 {
     top: 17%;
     left: 18%
 }
+.project .pro-container .pro::after {
+    right: -92%;
+}
 }
 /* end project  */
+/* start contact */
+.contact {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding) ;
+    background-color: var(--color2);
+}
+.contact .links {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+    gap:30px;
+    border-bottom: 1px solid var(--color3) ;
+    padding-bottom: 20px;
+}
+.contact .links i {
+    color: var(--color6);
+    font-size: 25px;
+    margin-right: 10px;
+}
+.contact .links a {
+    text-decoration: none;
+    color: var(--color6);
+}
+.contact .links .link:hover a ,
+.contact .links .link:hover i {
+    color: var(--color3);
+}
+.contact .like-button {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    width: 120px;
+    padding: 20px;
+    background-color: var(--color3);
+    color: var(--color1);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+/* end contact */
