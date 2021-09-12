@@ -292,7 +292,7 @@ h3 {
     text-align: left;
     width: 100%;
     position: absolute;
-    top: 90px;
+    top: 200px;
   }
   .bar::after {
     display: none;
@@ -301,9 +301,9 @@ h3 {
     height: 0px;
     border-style: solid;
     border-color: transparent transparent var(--color2) transparent;
-    border-width: 34px;
+    border-width: 43px;
     top: -34px;
-    right: calc(-50% + 34px);
+    right: calc(-50% + 67px);
     position: relative;
   }
   .bar:hover::after {
