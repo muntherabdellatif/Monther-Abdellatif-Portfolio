@@ -329,8 +329,8 @@ h3 {
 /* start profile  */
 .profile {
   background-color: var(--color1);
-  padding-top: var(--main-padding);
-  padding-bottom: var(--main-padding);
+  padding-top: calc(var(--main-padding) * 2);
+  padding-bottom: calc(var(--main-padding) * 2);
 }
 .profile .profile-info {
   display: flex;
@@ -551,11 +551,15 @@ h3 {
   height: 90%;
 }
 .project .pro-container .pro .text {
+  gap: 10px;
   padding: 30px;
   position: absolute;
   display: flex;
   flex-direction: column;
-  top: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
   color: var(--color3);
 }
 .project .pro-container .pro .text p,
@@ -610,10 +614,6 @@ h3 {
     -moz-transform: translateX(-800px);
     -ms-transform: translateX(-800px);
     -o-transform: translateX(-800px);
-  }
-  .project .pro-container .pro .text {
-    top: 17%;
-    left: 18%;
   }
   .project .pro-container .pro::after {
     right: -92%;
