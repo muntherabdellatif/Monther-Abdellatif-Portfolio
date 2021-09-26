@@ -60,7 +60,7 @@ ul {
   color: var(--color3);
 }
 .main-header > p {
-  font-size: 20px;
+  font-size: 25px;
   margin-bottom: 40px;
   color: var(--color6);
 }
@@ -365,10 +365,15 @@ h3 {
   width: 100%;
 }
 .profile .profile-info .about-me p {
-  line-height: 2;
+  line-height: 1.5;
   color: var(--color4);
 }
-
+@media (max-width: 991px) {
+  .profile .profile-info .about-me p {
+    line-height: 1.5;
+    font-size: 25px;
+  }
+}
 .profile .profile-info img {
   border-radius: 50%;
   width: 30%;
@@ -394,9 +399,9 @@ h3 {
     flex-direction: column;
   }
   .profile .profile-info .details {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
     justify-content: space-between;
+    grid-template-columns: 1fr 1fr;
   }
   .profile .profile-info > div {
     width: 100%;
@@ -406,10 +411,10 @@ h3 {
     margin: auto;
   }
   .profile .profile-info .details .section h4 {
-    font-size: 20px;
+    font-size: 25px;
   }
   .profile .profile-info .details .section p {
-    font-size: 20px;
+    font-size: 25px;
   }
 }
 /* end profile */
@@ -455,12 +460,13 @@ h3 {
 @media (max-width: 991px) {
   .experiances .container .section .part .place-time :not(.place),
   .experiances .container .section .part .info :not(.head) {
-    font-size: 20px;
+    line-height: 1.5;
+    font-size: 25px;
   }
   .experiances .container .section .part > div p,
   .experiances .container .section .part > div h4,
   .experiances .container .section .part > div a {
-    font-size: 20px;
+    font-size: 25px;
   }
 }
 .experiances .container .section .part .info {
@@ -548,7 +554,7 @@ h3 {
 }
 @media (max-width: 991px) {
   .abilities .section .supjects .supject .name {
-    font-size: 20px;
+    font-size: 25px;
   }
 }
 /* end abilities */
