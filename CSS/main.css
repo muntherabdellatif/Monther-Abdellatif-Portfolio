@@ -247,6 +247,7 @@ h3 {
 /* end landing */
 /* start bar  */
 .bar {
+  z-index: 2;
   position: fixed;
   height: 500px;
   width: 100px;
@@ -263,7 +264,7 @@ h3 {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
 }
-.bar i {
+.bar .fas {
   display: none;
 }
 .bar ul {
@@ -276,7 +277,7 @@ h3 {
   border-bottom: 1px solid var(--color6);
 }
 .bar li a {
-  color: white;
+  color: white !important;
   text-decoration: none;
 }
 @media screen and (max-width: 992px) {
@@ -288,7 +289,7 @@ h3 {
     z-index: 2;
     /* padding: 31px; */
   }
-  .bar i {
+  .bar .fas {
     margin: 106px 94px 0px 0px;
     text-align: end;
     width: 100%;
@@ -315,7 +316,7 @@ h3 {
     right: calc(-50% + 67px);
     position: relative;
   }
-  .bar:hover::after {
+  .bar.active::after {
     display: block;
   }
   .bar li {
@@ -326,7 +327,7 @@ h3 {
     margin-left: 50px;
     font-size: 45px;
   }
-  .bar:hover li {
+  .bar li.active {
     display: block;
   }
   .bar li a {
@@ -334,8 +335,6 @@ h3 {
     margin-left: 30px;
   }
 }
-/* end bar  */
-/* start profile  */
 .profile {
   background-color: var(--color1);
   padding-top: var(--main-padding);
@@ -564,13 +563,11 @@ h3 {
   padding-bottom: var(--main-padding);
   background-color: white;
 }
+.project .project-slider {
+  margin-bottom: 20px;
+}
 .project .main-header p {
   color: var(--color2);
-}
-.project .pro-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  gap: 30px;
 }
 .project .pro-container .pro {
   position: relative;
@@ -586,16 +583,6 @@ h3 {
   height: 400px;
   object-fit: cover;
   background-color: rgba(0, 0, 0, 0.842);
-}
-.project .pro-container .pro::after {
-  font-family: "Font Awesome 5 Free";
-  content: "\f0c1";
-  font-weight: 800;
-  position: relative;
-  top: -90%;
-  right: -86%;
-  color: var(--color3);
-  font-size: 40px;
 }
 .project .pro-container .pro img {
   width: 100%;
@@ -621,6 +608,10 @@ h3 {
   transform: translate(-50%, -50%);
   width: 100%;
   color: var(--color3);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
 }
 .project .pro-container .pro .text p,
 .project .pro-container .pro .text h4 {
@@ -648,6 +639,11 @@ h3 {
   -ms-transform: translateX(-400px);
   -o-transform: translateX(-400px);
 }
+.project .pro-container .pro .text h4::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f0c1";
+  margin-right: 10px;
+}
 .project .pro-container .pro:hover .text p,
 .project .pro-container .pro:hover .text h4 {
   text-align: center;
@@ -669,7 +665,7 @@ h3 {
     -ms-transform: translateX(800px);
     -o-transform: translateX(800px);
   }
-  .project .pro-container .pro .text h4 {
+  .project .pro-container .pro .text a h4 {
     font-size: 30px;
     transform: translateX(-800px);
     -webkit-transform: translateX(-800px);

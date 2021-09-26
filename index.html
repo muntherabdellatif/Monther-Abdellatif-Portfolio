@@ -9,6 +9,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:ital,wght@0,100;0,300;0,900;1,400&display=swap"
         rel="stylesheet">
+    <!-- swiper link -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <!-- render all element normally -->
     <link rel="stylesheet" href="CSS/normalize.css">
     <!-- font library -->
@@ -33,7 +35,7 @@
     <!-- end landing  -->
     <!-- start bar -->
     <div class="bar">
-        <i class="fas fa-bars"></i>
+        <div class="fas fa-bars" id="btn"></div>
         <ul>
             <li><a href="#profile">profile</a></li>
             <li><a href="#experiances">experiances</a></li>
@@ -198,61 +200,78 @@
                 <p>“You can do anything you set your mind to.” <br>
                     - Benjamin Franklin</p>
             </div>
-            <div class="pro-container">
-                <div class="pro">
-                    <img src="img/pro4.PNG" alt="">
-                    <a href="https://muntherabdellatif.github.io/Fusion-PV-system-company/?fbclid=IwAR05PqHqsKR_nmQKx4rLyBbF7_g-VOq8lBvIkqfMSqVRnqXKVKbj-lF7k5Y#">
+            <div class="project-slider swiper">
+                <div class="pro-container swiper-wrapper">
+                    <div class="pro swiper-slide">
+                        <img src="img/pro6.PNG" alt="">
                         <div class="text dark-mode">
-                            <h4>fusion</h4>
+                            <a href="https://muntherabdellatif.github.io/Grocery-Store/?fbclid=IwAR3O6wctet0l8F-CoQ9yLgMFRghaRmyytGfw9HqZ9me7A1IobR-W3pfDqMk" class="project-title">
+                                <h4>Grocery store</h4>
+                            </a>
+                            <p class="description">This is a full store page using HTML, CSS and JS</p>
+                            <p class="tag">Tags:</p>
+                            <p class="jop">HTML, CSS, JS</p>
+                        </div>
+                    </div>
+                    <div class="pro swiper-slide">
+                        <img src="img/pro4.PNG" alt="">
+                        <div class="text dark-mode">
+                            <a href="https://muntherabdellatif.github.io/Fusion-PV-system-company/?fbclid=IwAR05PqHqsKR_nmQKx4rLyBbF7_g-VOq8lBvIkqfMSqVRnqXKVKbj-lF7k5Y#" class="project-title">
+                                <h4 >fusion</h4>
+                            </a>
                             <p class="description">This is a PV company web page design using HTML, CSS and bootstrap </p>
                             <p class="tag">Tags:</p>
                             <p class="jop">HTML, CSS, bootstrap</p>
                         </div>
-                    </a>
-                </div>
-                <div class="pro">
-                    <img src="img/pro5.PNG" alt="">
-                    <a href="https://muntherabdellatif.github.io/My-first-web-page-using-bootstrap/?fbclid=IwAR3bMrLZHp_9SXphl5uCf84yRO7KLUH0PdpuoymvVQV91rfyhEcbVf9lY6U">
+                    </div>
+                    <div class="pro swiper-slide">
+                        <img src="img/pro5.PNG" alt="">
                         <div class="text dark-mode">
-                            <h4>TinDog</h4>
+                            <a href="https://muntherabdellatif.github.io/My-first-web-page-using-bootstrap/?fbclid=IwAR3bMrLZHp_9SXphl5uCf84yRO7KLUH0PdpuoymvVQV91rfyhEcbVf9lY6U" class="project-title">
+                                <h4>TinDog</h4>
+                            </a>
                             <p class="description">This is a web page design using HTML, CSS and bootstrap </p>
                             <p class="tag">Tags:</p>
                             <p class="jop">HTML, CSS, bootstrap</p>
                         </div>
-                    </a>
+                    </div>
                 </div>
-                <div class="pro">
-                    <img src="img/pro3.PNG" alt="">
-                    <a href="https://muntherabdellatif.github.io/login-page-one/?fbclid=IwAR0JV4qxPiPRdcTm_zavyuySq5kja4LIg7slLiauum_LCo6ymRKUR2-bj5E">
+            </div>
+            <div class="project-slider swiper">
+                <div class="pro-container swiper-wrapper">
+                    <div class="pro swiper-slide">
+                        <img src="img/pro3.PNG" alt="">
                         <div class="text dark-mode">
-                            <h4>login page</h4>
+                            <a href="https://muntherabdellatif.github.io/login-page-one/?fbclid=IwAR0JV4qxPiPRdcTm_zavyuySq5kja4LIg7slLiauum_LCo6ymRKUR2-bj5E" class="project-title">
+                                <h4>login page</h4>
+                            </a>
                             <p class="description">This is a login page design using HTML and CSS</p>
                             <p class="tag">Tags:</p>
                             <p class="jop">HTML, CSS</p>
                         </div>
-                    </a>
-                </div>
-                <div class="pro">
-                    <img src="img/pro2.PNG" alt="">
-                    <a href="https://muntherabdellatif.github.io/HTML-CSS-Template-two/">
+                    </div>
+                    <div class="pro swiper-slide">
+                        <img src="img/pro2.PNG" alt="">
                         <div class="text dark-mode">
-                            <h4>Template two</h4>
+                            <a href="https://muntherabdellatif.github.io/HTML-CSS-Template-two/" class="project-title">
+                                <h4>Template two</h4>
+                            </a>
                             <p class="description">This is my second website using HTML and CSS</p>
                             <p class="tag">Tags:</p>
                             <p class="jop">HTML, CSS</p>
                         </div>
-                    </a>
-                </div>
-                <div class="pro">
-                    <img src="img/pro1.PNG" alt="">
-                    <a href="https://muntherabdellatif.github.io/HTML-CSS-Template-One/">
+                    </div>
+                    <div class="pro swiper-slide">
+                        <img src="img/pro1.PNG" alt="">
                         <div class="text dark-mode">
-                            <h4>Template one</h4>
+                            <a href="https://muntherabdellatif.github.io/HTML-CSS-Template-One/" >
+                                <h4>Template one</h4>
+                            </a>
                             <p class="description">This is my first website using HTML and CSS</p>
                             <p class="tag">Tags:</p>
                             <p class="jop">HTML, CSS</p>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -288,6 +307,10 @@
         </div>
     </div>
     <!-- end contact -->
+    <!-- swiper js link-->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <!-- main js file  -->
+    <script src="JS/index.js"></script>
 </body>
 
 </html>
