@@ -45,7 +45,7 @@ window.onscroll = function () {
     }
   }else {
      // stars 
-    if (window.scrollY >=4525) {
+    if (window.scrollY >=4000) {
       for(let i=0 ;i<stars.length ; i++){
         stars[i].classList.remove("none");
       }
