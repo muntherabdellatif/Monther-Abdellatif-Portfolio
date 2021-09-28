@@ -1,3 +1,4 @@
+let hireMe =document.querySelectorAll(".profile .balls p span");
 let listelement =document.querySelectorAll(".bar li");
 let myImg = document.querySelector (".profile .profile-info img");
 let stars = document.getElementsByClassName("stars");
@@ -16,14 +17,19 @@ window.onscroll = () => {
 // end bar
 // start onscroll
 window.onscroll = function () {
-  console.log(window.scrollY);
   // bar and img 
   if (window.scrollY >=615) {
     document.querySelector(".bar").classList.remove("none");
     myImg.classList.add("grow");
+    for (let i=0 ; i<7; i++){
+      hireMe[i].classList.add("move");
+    }
   } else {
     document.querySelector(".bar").classList.add("none");
     myImg.classList.remove("grow");
+    for (let i=0 ; i<7; i++){
+      hireMe[i].classList.remove("move");
+    }
   }
   // stars and contact link
   if (window.innerWidth>992){
