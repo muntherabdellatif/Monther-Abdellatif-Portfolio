@@ -113,7 +113,16 @@ ul {
   content: "\f005 \f005 \f005 \f005 \f005 ";
 }
 .stars::before {
+  transition: 5s;
   color: var(--color3);
+  text-shadow: 0px 1px 20px var(--color3);
+  -webkit-transition: 5s;
+  -moz-transition: 5s;
+  -ms-transition: 5s;
+  -o-transition: 5s;
+}
+.stars.none::before {
+  color: var(--color6);
 }
 .stars::after {
   color: var(--color6);
@@ -264,6 +273,9 @@ h3 {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
 }
+.bar.none {
+  display: none;
+}
 .bar .fas {
   display: none;
 }
@@ -375,12 +387,21 @@ h3 {
 }
 .profile .profile-info img {
   border-radius: 50%;
-  width: 30%;
-  height: 30%;
+  width: 0%;
+  height: 0%;
+  transition: 1s;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+.profile .profile-info img.grow {
+  width: 30%;
+  height: 30%;
 }
 .profile .profile-info .details .section {
   margin-bottom: 10px;
@@ -680,6 +701,7 @@ h3 {
 /* end project  */
 /* start contact */
 .contact {
+  overflow: hidden;
   padding-top: var(--main-padding);
   padding-bottom: var(--main-padding);
   background-color: var(--color2);
@@ -690,6 +712,19 @@ h3 {
   gap: 30px;
   border-bottom: 1px solid var(--color3);
   padding-bottom: 20px;
+  transition: 1.5s;
+  -webkit-transition: 1.5s;
+  -moz-transition: 1.5s;
+  -ms-transition: 1.5s;
+  -o-transition: 1.5s;
+}
+.contact .links.hidden {
+  border-bottom: 1px solid var(--color2);
+  transform: translateY(150%);
+  -webkit-transform: translateY(150%);
+  -moz-transform: translateY(150%);
+  -ms-transform: translateY(150%);
+  -o-transform: translateY(150%);
 }
 .contact .links i {
   color: var(--color6);
