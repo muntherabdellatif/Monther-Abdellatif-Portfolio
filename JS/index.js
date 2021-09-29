@@ -1,3 +1,4 @@
+let hireMeAbilities =document.querySelectorAll(".abilities .balls p span");
 let hireMeProfile =document.querySelectorAll(".profile .balls p span");
 let hireMeExperiances =document.querySelectorAll(".experiances .balls p span");
 let listelement =document.querySelectorAll(".bar li");
@@ -18,7 +19,7 @@ window.onscroll = () => {
 // end bar
 // start onscroll
 window.onscroll = function () {
-  // console.log(window.scrollY);
+  console.log(window.scrollY);
   // bar , img and hire Me Profile
   if (window.scrollY >=615) {
     document.querySelector(".bar").classList.remove("none");
@@ -33,7 +34,7 @@ window.onscroll = function () {
       hireMeProfile[i].classList.remove("move");
     }
   }
-  // stars and contact link
+  // large screen
   if (window.innerWidth>992){
     // stars 
     if (window.scrollY >=2100) {
@@ -61,7 +62,19 @@ window.onscroll = function () {
         hireMeExperiances[i].classList.remove("move");
       }
     }
-  }else {
+    // abilities ball 
+    if (window.scrollY >=2700) {
+      for (let i=0 ; i<7; i++){
+        hireMeAbilities[i].classList.add("move");
+      }
+    } else {
+      for (let i=0 ; i<7; i++){
+        hireMeAbilities[i].classList.remove("move");
+      }
+    }
+  }
+    // small screen
+  else {
      // stars 
     if (window.scrollY >=4000) {
       for(let i=0 ;i<stars.length ; i++){
@@ -78,16 +91,26 @@ window.onscroll = function () {
     } else {
       contactLink.classList.add("hidden");
     }
-        // experiances ball 
-        if (window.scrollY >=2700) {
-          for (let i=0 ; i<7; i++){
-            hireMeExperiances[i].classList.add("move");
-          }
-        } else {
-          for (let i=0 ; i<7; i++){
-            hireMeExperiances[i].classList.remove("move");
-          }
-        }
+    // experiances ball 
+    if (window.scrollY >=2700) {
+      for (let i=0 ; i<7; i++){
+        hireMeExperiances[i].classList.add("move");
+      }
+    } else {
+      for (let i=0 ; i<7; i++){
+        hireMeExperiances[i].classList.remove("move");
+      }
+    }
+    // abilities ball 
+    if (window.scrollY >=4060) {
+      for (let i=0 ; i<7; i++){
+        hireMeAbilities[i].classList.add("move");
+      }
+    } else {
+      for (let i=0 ; i<7; i++){
+        hireMeAbilities[i].classList.remove("move");
+      }
+    }
   }
 }
 // end onscroll

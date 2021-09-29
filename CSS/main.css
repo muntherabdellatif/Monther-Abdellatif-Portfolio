@@ -789,6 +789,81 @@ h3 {
     font-size: 25px;
   }
 }
+.abilities .balls {
+  overflow: hidden;
+}
+.abilities .balls p {
+  text-align: center;
+  margin-left: 35px;
+  color: white;
+}
+.abilities .balls p span {
+  text-align: center;
+  display: inline-block;
+  width: 5%;
+  height: 0;
+  padding-bottom: 5%;
+  background-color: var(--color3);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.abilities .balls p span.impty {
+  background-color: transparent !important;
+}
+.abilities .balls p span.move {
+  animation-name: move3;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+@keyframes move3 {
+  0% {
+    transform: translateX(0px) rotate(0deg);
+    -webkit-transform: translateX(0px) rotate(0deg);
+    -moz-transform: translateX(0px) rotate(0deg);
+    -ms-transform: translateX(0px) rotate(0deg);
+    -o-transform: translateX(0px) rotate(0deg);
+  }
+  20% {
+    transform: translateX(-100px) rotate(-360deg);
+    -webkit-transform: translateX(-100px) rotate(-360deg);
+    -moz-transform: translateX(-100px) rotate(-360deg);
+    -ms-transform: translateX(-100px) rotate(-360deg);
+    -o-transform: translateX(-100px) rotate(-360deg);
+  }
+  40% {
+    transform: translateX(0px) rotate(0deg);
+    -webkit-transform: translateX(0px) rotate(0deg);
+    -moz-transform: translateX(0px) rotate(0deg);
+    -ms-transform: translateX(0px) rotate(0deg);
+    -o-transform: translateX(0px) rotate(0deg);
+  }
+  60% {
+    transform: translateX(0px) rotate(0deg);
+    -webkit-transform: translateX(0px) rotate(0deg);
+    -moz-transform: translateX(0px) rotate(0deg);
+    -ms-transform: translateX(0px) rotate(0deg);
+    -o-transform: translateX(0px) rotate(0deg);
+  }
+  80% {
+    transform: translateX(100px) rotate(360deg);
+    -webkit-transform: translateX(100px) rotate(360deg);
+    -moz-transform: translateX(100px) rotate(360deg);
+    -ms-transform: translateX(100px) rotate(360deg);
+    -o-transform: translateX(100px) rotate(360deg);
+  }
+  100% {
+    transform: translateX(0px) rotate(0deg);
+    -webkit-transform: translateX(0px) rotate(0deg);
+    -moz-transform: translateX(0px) rotate(0deg);
+    -ms-transform: translateX(0px) rotate(0deg);
+    -o-transform: translateX(0px) rotate(0deg);
+  }
+}
 /* end abilities */
 /* start project */
 .project {
