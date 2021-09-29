@@ -486,7 +486,7 @@ h3 {
   animation-duration: 2s;
   animation-fill-mode: forwards;
 }
-.profile .balls p span:nth-child(6) {
+.profile .balls p span:nth-child(0) {
   animation-delay: 1.5s;
 }
 .profile .balls p span:nth-child(5) {
@@ -686,7 +686,7 @@ h3 {
   animation-delay: 1.5s;
 }
 .experiances .balls p span:nth-child(5) {
-  animation-delay: 3s;
+  animation-delay: 4s;
 }
 .experiances .balls p span:nth-child(4) {
   animation-delay: 3s;
@@ -695,13 +695,13 @@ h3 {
   animation-delay: 4.5s;
 }
 .experiances .balls p span:nth-child(2) {
-  animation-delay: 6s;
+  animation-delay: 2.5s;
 }
 .experiances .balls p span:nth-child(1) {
-  animation-delay: 7.5s;
+  animation-delay: 5s;
 }
 .experiances .balls p span:nth-child(0) {
-  animation-delay: 9s;
+  animation-delay: 2s;
 }
 @keyframes move2 {
   0% {
