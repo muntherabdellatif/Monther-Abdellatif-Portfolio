@@ -486,7 +486,7 @@ h3 {
   animation-duration: 2s;
   animation-fill-mode: forwards;
 }
-.profile .balls p span:nth-child(0) {
+.profile .balls p span:nth-child(6) {
   animation-delay: 1.5s;
 }
 .profile .balls p span:nth-child(5) {
