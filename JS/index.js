@@ -1,4 +1,5 @@
-let hireMe =document.querySelectorAll(".profile .balls p span");
+let hireMeProfile =document.querySelectorAll(".profile .balls p span");
+let hireMeExperiances =document.querySelectorAll(".experiances .balls p span");
 let listelement =document.querySelectorAll(".bar li");
 let myImg = document.querySelector (".profile .profile-info img");
 let stars = document.getElementsByClassName("stars");
@@ -17,18 +18,19 @@ window.onscroll = () => {
 // end bar
 // start onscroll
 window.onscroll = function () {
-  // bar and img 
+  // console.log(window.scrollY);
+  // bar , img and hire Me Profile
   if (window.scrollY >=615) {
     document.querySelector(".bar").classList.remove("none");
     myImg.classList.add("grow");
     for (let i=0 ; i<7; i++){
-      hireMe[i].classList.add("move");
+      hireMeProfile[i].classList.add("move");
     }
   } else {
     document.querySelector(".bar").classList.add("none");
     myImg.classList.remove("grow");
     for (let i=0 ; i<7; i++){
-      hireMe[i].classList.remove("move");
+      hireMeProfile[i].classList.remove("move");
     }
   }
   // stars and contact link
@@ -49,6 +51,16 @@ window.onscroll = function () {
     } else {
       contactLink.classList.add("hidden");
     }
+    // experiances ball 
+    if (window.scrollY >=1500) {
+      for (let i=0 ; i<7; i++){
+        hireMeExperiances[i].classList.add("move");
+      }
+    } else {
+      for (let i=0 ; i<7; i++){
+        hireMeExperiances[i].classList.remove("move");
+      }
+    }
   }else {
      // stars 
     if (window.scrollY >=4000) {
@@ -66,6 +78,16 @@ window.onscroll = function () {
     } else {
       contactLink.classList.add("hidden");
     }
+        // experiances ball 
+        if (window.scrollY >=2700) {
+          for (let i=0 ; i<7; i++){
+            hireMeExperiances[i].classList.add("move");
+          }
+        } else {
+          for (let i=0 ; i<7; i++){
+            hireMeExperiances[i].classList.remove("move");
+          }
+        }
   }
 }
 // end onscroll
