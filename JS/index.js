@@ -1,3 +1,4 @@
+let hireMeProject =document.querySelectorAll(".project .balls p span");
 let hireMeAbilities =document.querySelectorAll(".abilities .balls p span");
 let hireMeProfile =document.querySelectorAll(".profile .balls p span");
 let hireMeExperiances =document.querySelectorAll(".experiances .balls p span");
@@ -72,6 +73,16 @@ window.onscroll = function () {
         hireMeAbilities[i].classList.remove("move");
       }
     }
+       // project ball 
+       if (window.scrollY >=3950) {
+        for (let i=0 ; i<7; i++){
+          hireMeProject[i].classList.add("move");
+        }
+      } else {
+        for (let i=0 ; i<7; i++){
+          hireMeProject[i].classList.remove("move");
+        }
+      }
   }
     // small screen
   else {
@@ -109,6 +120,16 @@ window.onscroll = function () {
     } else {
       for (let i=0 ; i<7; i++){
         hireMeAbilities[i].classList.remove("move");
+      }
+    }
+      // project ball 
+      if (window.scrollY >=5600) {
+      for (let i=0 ; i<7; i++){
+        hireMeProject[i].classList.add("move");
+      }
+    } else {
+      for (let i=0 ; i<7; i++){
+        hireMeProject[i].classList.remove("move");
       }
     }
   }

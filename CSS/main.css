@@ -985,6 +985,88 @@ h3 {
     right: -92%;
   }
 }
+/* .project .balls {
+  height: 200px;
+  overflow: hidden;
+} */
+.project .balls p {
+  text-align: center;
+  margin-left: 35px;
+  color: white;
+}
+.project .balls p span {
+  text-align: center;
+  display: inline-block;
+  width: 5%;
+  height: 0;
+  padding-bottom: 5%;
+  background-color: var(--color3);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.project .balls p span.impty {
+  background-color: transparent !important;
+}
+.project .balls p span.move {
+  animation-name: move4;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+.project .balls p span.impty.move {
+  animation-name: none;
+}
+.project .balls p span:nth-child(6) {
+  animation-delay: 1.5s;
+}
+.project .balls p span:nth-child(5) {
+  animation-delay: 4s;
+}
+.project .balls p span:nth-child(4) {
+  animation-delay: 3s;
+}
+.project .balls p span:nth-child(3) {
+  animation-delay: 4.5s;
+}
+.project .balls p span:nth-child(2) {
+  animation-delay: 2.5s;
+}
+.project .balls p span:nth-child(1) {
+  animation-delay: 5s;
+}
+.project .balls p span:nth-child(0) {
+  animation-delay: 2s;
+}
+@keyframes move4 {
+  0% {
+    box-shadow: 0px 0px 12px 0px var(--color3);
+    text-shadow: 0px 0px 3px white;
+  }
+  20% {
+    box-shadow: -20px -20px 12px 0px var(--color3);
+    text-shadow: -20px -20px 3px white;
+  }
+  40% {
+    box-shadow: 0px -20px 12px 0px var(--color3);
+    text-shadow: 0px -20px 3px white;
+  }
+  60% {
+    box-shadow: 20px -20px 12px 0px var(--color3);
+    text-shadow: 20px -20px 3px white;
+  }
+  80% {
+    box-shadow: 20px 0px 12px 0px var(--color3);
+    text-shadow: 20px 0px 3px white;
+  }
+  100% {
+    box-shadow: 0px 0px 0px 0px var(--color3);
+    text-shadow: 0px 0px 0px white;
+  }
+}
 /* end project  */
 /* start contact */
 .contact {
