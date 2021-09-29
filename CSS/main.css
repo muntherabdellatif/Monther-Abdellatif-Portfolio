@@ -1016,6 +1016,7 @@ h3 {
   animation-timing-function: linear;
   animation-duration: 3s;
   animation-fill-mode: forwards;
+  background-color: white;
 }
 .project .balls p span.impty.move {
   animation-name: none;
@@ -1065,6 +1066,7 @@ h3 {
   100% {
     box-shadow: 0px 0px 0px 0px var(--color3);
     text-shadow: 0px 0px 0px white;
+    background-color: var(--color3);
   }
 }
 /* end project  */
