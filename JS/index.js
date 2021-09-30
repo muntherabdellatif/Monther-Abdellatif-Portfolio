@@ -6,132 +6,86 @@ let listelement =document.querySelectorAll(".bar li");
 let myImg = document.querySelector (".profile .profile-info img");
 let stars = document.getElementsByClassName("stars");
 let contactLink =document.querySelector(".contact .links");
+let contactSection =document.getElementById("contact");
 // start bar 
 document.querySelectorAll(".bar")[0].addEventListener("click", function() {
     for (let i = 0 ;i<5 ; i++) {
         listelement[i].classList.toggle("active");}
     document.querySelector(".bar").classList.toggle("active");
 });
-window.onscroll = () => {
-    for (let i = 0 ;i<5 ; i++) {
-        listelement[i].classList.remove("active");}
-    document.querySelector(".bar").classList.remove("active");
-}
 // end bar
 // start onscroll
 window.onscroll = function () {
-  console.log(window.scrollY);
-  // bar , img and hire Me Profile
-  if (window.scrollY >=615) {
-    document.querySelector(".bar").classList.remove("none");
+  // img 
+  if(myImg.getBoundingClientRect().top < window.innerHeight && myImg.getBoundingClientRect().bottom >= 0){
     myImg.classList.add("grow");
+  }else{
+    myImg.classList.remove("grow");
+  }
+  // hire Me Profile
+  if(hireMeProfile[0].getBoundingClientRect().top < window.innerHeight && hireMeProfile[0].getBoundingClientRect().bottom >= 0){
     for (let i=0 ; i<7; i++){
       hireMeProfile[i].classList.add("move");
     }
-  } else {
-    document.querySelector(".bar").classList.add("none");
-    myImg.classList.remove("grow");
+  }else{
     for (let i=0 ; i<7; i++){
       hireMeProfile[i].classList.remove("move");
     }
   }
-  // large screen
-  if (window.innerWidth>992){
-    // stars 
-    if (window.scrollY >=2100) {
-      for(let i=0 ;i<stars.length ; i++){
-        stars[i].classList.remove("none");
-      }
-    } else {
-      for(let i=0 ;i<stars.length ; i++){
-        stars[i].classList.add("none");
-      }
-    }
-    // contact link
-    if (window.scrollY >=3800) {
-      contactLink.classList.remove("hidden");
-    } else {
-      contactLink.classList.add("hidden");
-    }
-    // experiances ball 
-    if (window.scrollY >=1500) {
-      for (let i=0 ; i<7; i++){
-        hireMeExperiances[i].classList.add("move");
-      }
-    } else {
-      for (let i=0 ; i<7; i++){
-        hireMeExperiances[i].classList.remove("move");
-      }
-    }
-    // abilities ball 
-    if (window.scrollY >=2700) {
-      for (let i=0 ; i<7; i++){
-        hireMeAbilities[i].classList.add("move");
-      }
-    } else {
-      for (let i=0 ; i<7; i++){
-        hireMeAbilities[i].classList.remove("move");
-      }
-    }
-       // project ball 
-       if (window.scrollY >=3950) {
-        for (let i=0 ; i<7; i++){
-          hireMeProject[i].classList.add("move");
-        }
-      } else {
-        for (let i=0 ; i<7; i++){
-          hireMeProject[i].classList.remove("move");
-        }
-      }
+  // bar 
+  if (window.scrollY >=615) {
+    document.querySelector(".bar").classList.remove("none");
+  } else {
+    document.querySelector(".bar").classList.add("none");
   }
-    // small screen
-  else {
-     // stars 
-    if (window.scrollY >=4000) {
-      for(let i=0 ;i<stars.length ; i++){
-        stars[i].classList.remove("none");
-      }
-    } else {
-      for(let i=0 ;i<stars.length ; i++){
-        stars[i].classList.add("none");
-      }
+  for (let i = 0 ;i<5 ; i++) {
+    listelement[i].classList.remove("active");}
+  document.querySelector(".bar").classList.remove("active");
+  // stars 
+  if(stars[0].getBoundingClientRect().top < window.innerHeight && stars[0].getBoundingClientRect().bottom >= 0){
+    for(let i=0 ;i<stars.length ; i++){
+      stars[i].classList.remove("none");
     }
-    // contact link
-    if (window.scrollY >=5500) {
-      contactLink.classList.remove("hidden");
-    } else {
-      contactLink.classList.add("hidden");
+  }else {
+    for(let i=0 ;i<stars.length ; i++){
+      stars[i].classList.add("none");
     }
-    // experiances ball 
-    if (window.scrollY >=2700) {
-      for (let i=0 ; i<7; i++){
-        hireMeExperiances[i].classList.add("move");
-      }
-    } else {
-      for (let i=0 ; i<7; i++){
-        hireMeExperiances[i].classList.remove("move");
-      }
+  }
+  // experiances ball 
+  if (hireMeExperiances[0].getBoundingClientRect().top < window.innerHeight && hireMeExperiances[0].getBoundingClientRect().bottom >= 0) {
+    for (let i=0 ; i<7; i++){
+      hireMeExperiances[i].classList.add("move");
     }
-    // abilities ball 
-    if (window.scrollY >=4060) {
-      for (let i=0 ; i<7; i++){
-        hireMeAbilities[i].classList.add("move");
-      }
-    } else {
-      for (let i=0 ; i<7; i++){
-        hireMeAbilities[i].classList.remove("move");
-      }
+  } else {
+    for (let i=0 ; i<7; i++){
+      hireMeExperiances[i].classList.remove("move");
     }
-      // project ball 
-      if (window.scrollY >=5600) {
-      for (let i=0 ; i<7; i++){
-        hireMeProject[i].classList.add("move");
-      }
-    } else {
-      for (let i=0 ; i<7; i++){
-        hireMeProject[i].classList.remove("move");
-      }
+  }
+  // abilities ball 
+  if (hireMeAbilities[0].getBoundingClientRect().top < window.innerHeight && hireMeAbilities[0].getBoundingClientRect().bottom >= 0) {
+    for (let i=0 ; i<7; i++){
+      hireMeAbilities[i].classList.add("move");
     }
+  } else {
+    for (let i=0 ; i<7; i++){
+      hireMeAbilities[i].classList.remove("move");
+    }
+  }
+  // project ball 
+  if (hireMeProject[0].getBoundingClientRect().top < window.innerHeight && hireMeProject[0].getBoundingClientRect().bottom >= 0) {
+    for (let i=0 ; i<7; i++){
+      hireMeProject[i].classList.add("move");
+    }
+  } else {
+    for (let i=0 ; i<7; i++){
+      hireMeProject[i].classList.remove("move");
+    }
+  }
+      // contact link
+  if (contactSection.getBoundingClientRect().top < window.innerHeight && contactSection.getBoundingClientRect().bottom >= 0) {
+    contactLink.classList.remove("hidden");
+  } else {
+    contactLink.classList.add("hidden");
   }
 }
 // end onscroll
